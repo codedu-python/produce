@@ -1,0 +1,1 @@
+N = int(input("숫자를 하나 입력하시오\n"))Numrange = list(range(2, N))for n in Numrange:    for compare in range(n+1, N):        if compare % n ==0 and compare in Numrange:            Numrange.remove(compare)print(sum(Numrange))
