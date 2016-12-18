@@ -15,6 +15,7 @@ def addPrime(N):
             else:
                 a.append(t)
             t+=1
+        print(a)
         for i in a:
             s = s + i
         return s
