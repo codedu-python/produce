@@ -6,7 +6,7 @@ def gcd(a, b):
         temp = a % b
         a = b
         b = temp
-        return abs(a)#abs()가 절대값 함수라네요
+        return abs(a)#abs()가 절대값 함수라네요.
 
 def lcm(a, b):
     gcd_value = gcd(a, b)
