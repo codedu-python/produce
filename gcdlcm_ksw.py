@@ -13,4 +13,3 @@ def lcm(a, b):
     return abs( (a * b) / gcd_value )
 lcm_value = lcm(a,b)
 print("최대공약수는 %d, 최소공배수는 %d입니다."%(gcd_value, lcm_value))
-s
