@@ -7,12 +7,10 @@ def gcd(a, b):
         a = b
         b = temp
         return abs(a)#abs()가 절대값 함수라네요~
-
+gcd_value = gcd(a,b)
 def lcm(a, b):
-    gcd_value = gcd(a, b)
     if (gcd_value == 0): return 0
     return abs( (a * b) / gcd_value )
-
-gcd_value = gcd(a,b)
 lcm_value = lcm(a,b)
 print("최대공약수는 %d, 최소공배수는 %d입니다."%(gcd_value, lcm_value))
+s
