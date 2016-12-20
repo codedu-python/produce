@@ -4,10 +4,7 @@ A = int(input('첫번째 숫자를 입력하세요'))
 B = int(input('두번째 숫자를 입력하세요'))
 
 def insu(num):
-    insu = set()
-    for i in range(1, num + 1):
-        if num % i == 0:
-            insu.add(i)
+    insu = {i for i in range(1, num+1) if num % i == 0}
     return insu
 insu_A = insu(A)
 insu_B = insu(B)
@@ -21,28 +18,14 @@ else:
 
 
 def soinsubunhae(num):
-    insu = []
-    for i in range(1, num+1):
-        if num % i == 0:
-            insu.append(i)
-    Num_prime = list(range(2, num))
-    for n in Num_prime:
-        for compare in range(n+1, num):
-            if compare % n ==0 and compare in Num_prime:
-                Num_prime.remove(compare)
-
-
     soinsu = []
-    for primeinsu in insu:
-        if primeinsu in Num_prime:
-            count = 0
-            while True:
-                if num/primeinsu == int(num/primeinsu):
-                    count += 1
-                    num = int(num/primeinsu)
-                    soinsu.append(primeinsu)
-                else:
-                    break
+    for i in range (2, num+1):
+        while i <= num:
+            if num % i == 0:
+                num = num/i
+                soinsu.append(i)
+            else:
+                break
 
     return soinsu
 
