@@ -12,6 +12,7 @@ def gcd(a, b):
                 a = max(numbers)
             else:
                 a = 1
+        print(a)
     return a
 gcd_value = gcd(a,b)
 def lcm(a, b):

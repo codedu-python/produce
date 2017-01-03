@@ -3,20 +3,18 @@ from collections import Counter
 A = int(input('첫번째 숫자를 입력하세요'))
 B = int(input('두번째 숫자를 입력하세요'))
 
+#최대공약수입니다.
 def insu(num):
     insu = {i for i in range(1, num+1) if num % i == 0}
     return insu
-insu_A = insu(A)
-insu_B = insu(B)
 
-inter_insu = insu_A & insu_B
-max_insu = max(inter_insu)
+max_insu = max(insu(A) & insu(B))
 if max_insu != 1:
     print('두 수의 최대공약수는 ',max_insu)
 else:
     print('최대공약수 없음')
 
-
+#최소공배수입니다.
 def soinsubunhae(num):
     soinsu = []
     for i in range (2, num+1):
